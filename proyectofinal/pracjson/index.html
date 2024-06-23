@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <h1>Ejemplo JSON</h1>
+
+    <script src="../pracjson/main.js"></script>
+
+    <form action="" id="Correo">
+
+
+    
+    <div class="espnom">
+        <label for="nombre">Nombre y primer apellido</label>
+        <input id="nombre" name="nombre" type="text"  maxlength="50" data-length="50" required />
+      </div>
+
+      <div class="espema">
+        <label >E-mail</label>
+        <input id="email" name="email" type="email"  maxlength="50" data-length="50" required />
+      </div>
+
+      <div class="espmen">
+        <label for="titmensaje">Mensaje</label>
+        <div class="alturaMensa">
+          <input name="mensaje" id="mensaje" class="ESPmensaje center-content" required></input>
+        </div>  
+      </div>
+
+      <div class="espenv">
+        <button onclick="GuardarObjeto()">Enviar</button>
+        <h5 class="notifCorrecto"></h5>
+      </div>             
+    </form>
+   
+
+
+
+
+
+
+
+
+</body>
+</html>

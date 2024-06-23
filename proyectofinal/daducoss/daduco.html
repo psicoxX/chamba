@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="blue">
+    <center>
+        <button onclick="rolldice()"><h1 class="dado">Tria el dado </h1></button>
+    </center>
+    <div class="boton" id="die1" 1 ></div>
+   
+
+    <h2 id="status" style="clear: left;"></h2>
+    <h2 id="tiro" style="clear: left;"></h2>
+    <script>
+
+        var x=0;
+        var y=1;
+        function rolldice() {
+            var die1 = document.getElementById("die1");
+            var status= document.getElementById("status");
+            var d1 = Math.floor(Math.random() * 6)+ 1;
+            var pos = d1 + y;
+            die1.innerHTML = d1;
+
+            
+        }
+
+
+    </script>
+
+
+</body>
+</html>

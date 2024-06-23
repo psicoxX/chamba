@@ -1,0 +1,10 @@
+img{
+    margin: auto;
+    cursor: pointer;
+    transition: 1s;
+
+}
+img:hoover{
+    transform: scale(3);
+    transition: 1s;
+}

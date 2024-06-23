@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..\css\slider.css">
+</head>
+<body>
+    <section id="gallery">
+        <div class="gallery-container">
+            <figure class="gallery-item">
+                <img src="..\imagenes y logos\atardecer.jpg" alt="Imagen 1">
+                <figcaption>Descripción de la imagen 1</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="..\imagenes y logos/burbujadelcarmen.jpg" alt="Imagen 2">
+               <li><a href="./destinos/playadelcarmen.html">Playa del carmen</a></li>
+            </figure>
+            <figure class="gallery-item">
+                <img src="..\imagenes y l" alt="Imagen 3">
+                <figcaption>Descripción de la imagen 3</figcaption>
+            </figure>
+            <!-- ... otras imágenes ... -->
+        </div>
+        <nav class="gallery-navigation">
+            <button class="nav-button prev-button">Anterior</button>
+            <button class="nav-button next-button">Siguiente</button>
+        </nav>
+    </section>
+    <script>
+
+let currentIndex = 0;
+
+document.querySelector('.prev-button').addEventListener('click', () => {
+   navigate(-1);
+});
+
+document.querySelector('.next-button').addEventListener('click', () => {
+   navigate(1);
+});
+
+function navigate(direction) {
+   const galleryContainer = document.querySelector('.gallery-container');
+   const totalImages = document.querySelectorAll('.gallery-item').length;
+
+   currentIndex = (currentIndex + direction + totalImages) % totalImages;
+   const offset = -currentIndex * 100;
+
+   galleryContainer.style.transform = `translateX(${offset}%)`;
+}
+
+        let autoplayInterval = null;
+        
+        function startAutoplay(interval) {
+           stopAutoplay(); // Detiene cualquier autoplay anterior para evitar múltiples intervalos.
+           autoplayInterval = setInterval(() => {
+              navigate(1); // Navega a la siguiente imagen cada intervalo de tiempo.
+           }, interval);
+        }
+        
+        function stopAutoplay() {
+           clearInterval(autoplayInterval);
+        }
+        
+        // Iniciar autoplay con un intervalo de 3 segundos.
+        startAutoplay(3000);
+        
+        // Opcional: Detener autoplay cuando el usuario interactúa con los botones de navegación.
+        document.querySelectorAll('.nav-button').forEach(button => {
+            button.addEventListener('click', stopAutoplay);
+        });
+        </script>
+</body>
+</html>

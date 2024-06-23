@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../js/inicio de sesion.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inicia sesion</title>
+</head>
+<body>
+    <FORM method="post" name="../php/inicio de sesion.php" autocomplete="off">
+        Nombre:<input type="text" name="nombre" id="nombre" value="'.$nombre.'">
+
+        Apellido: <input type="text" name="apellido" id="apellido" value="'.$apellido.'">
+
+        <br />
+        <input type="submit" value="'.GUARDAR.'" name="operacion">
+        <input type="submit" value="'.VER_DATOS.'" name="operacion">
+
+        </FORM>
+</body>
+</html>

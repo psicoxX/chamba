@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+   
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #f1f1f1;
+    background-color: aliceblue;
+}
+
+.header {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.footer {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 10px;
+}
+.imgfondo{
+    background-image: linear-gradient(),
+    url('..\imagenes y logos\playadelvcarmen.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size:cover ;
+    
+
+}
+footer{
+
+    background: var(--color-bg1);
+
+    bottom:0;
+
+    left: 0;
+
+    right: 0;
+
+}
+
+.footer__container{
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+.footer__container> div h4 {
+
+    margin-bottom: 1.2rem;
+
+}
+
+
+
+.footer__1 p{
+
+    margin: 0 0 2rem
+
+}
+
+
+
+footer ul li{
+
+    margin-bottom: 0.7;
+
+}
+
+
+
+footer ul li a:hover{
+
+    text-decoration: underline;
+
+}
+
+
+
+.footer_sociales {
+
+    display: flex;
+
+    gap: 1rem;
+
+    font-size: 1.2;
+
+    margin-top:2rem;
+
+}
+video{
+    height: 100%;
+    width: 100%;
+}

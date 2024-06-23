@@ -1,0 +1,230 @@
+
+p{
+    color: black;
+}
+
+
+.foto{
+
+    height: 60%;
+
+    margin-left: auto;
+
+    display: grid;
+
+    width: 50%;
+
+    border-radius: 50%;
+
+}
+
+.foto:hover{
+
+    transform: scale(1.2);
+
+    transition: all .5s;
+
+}
+
+.titul{
+
+    text-align: center;
+
+    background-color: black;
+
+    color: rgb(164, 167, 170);
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+
+    padding:20px;
+
+    border-radius: 10px;
+
+    margin-bottom: 60px;
+
+}
+
+.listas{
+
+    display: flex;
+
+    justify-content: space-between;
+
+    list-style: none;
+
+}
+
+a {
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    color:rgb(9, 30, 50) ;
+
+    position: relative;
+
+    text-decoration: none;
+
+    width: 100px;
+
+  }
+
+  
+
+  a::before {
+
+    content: '';
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 4px;
+
+    border-radius: 4px;
+
+    background-color: #ffffff;
+
+    bottom: 0;
+
+    left: 0;
+
+    transform-origin: center;
+
+    transform: scaleX(0);
+
+    transition: transform .3s cubic-bezier(0.08, 0.44, 0.93, 1.2);
+
+  }
+
+  
+
+  a:hover::before {
+
+    transform-origin: left;
+
+    transform: scaleX(1);
+
+  }
+
+  
+
+.try{
+
+    border-radius: 50%;
+
+    width:70px;
+
+}
+
+
+
+.listado{
+
+    margin-top: 60px;
+
+    margin-bottom: 20px;
+
+    list-style: none;
+
+    li{
+        width: 50%;
+        display: block;
+
+    }
+
+    div{
+
+        display: inline;
+
+    }
+
+    img{
+
+        margin: 10px;
+
+        border-radius: 60px;
+
+        width:80%;
+
+        height: 10%;
+
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+        filter: grayscale(100%);
+
+    }
+
+    img:hover{
+
+        transform: scale(1.2);
+
+        transition: all .5s;
+
+        filter: grayscale(0%);
+
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+    }
+
+    
+
+  
+
+}
+
+.lom{
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    text-align: center;
+
+    color: rgb(164, 167, 170);
+
+    padding: 10px;
+
+    background-color: black;
+
+    border-radius: 10px;
+
+}
+
+button{
+
+    color: whitesmoke;
+
+    background-color: black;
+
+    margin: 12px;
+
+    border-radius: 15px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+}
+
+.descripcion {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    padding: 10px;
+    position: absolute;
+    top: 15%;  /* Cambiado a % para ser responsive */
+    left: 65%; /* Cambiado a % y ajustado para centrar */
+    transform: translate(-50%, -50%); /* Centra horizontal y verticalmente */
+    text-align: center;
+    font-size: 1em;
+}
+
+@media (max-width: 768px) {
+  
+
+    .descripcion {
+        position: relative;
+        transform: none;
+        text-align: left;
+    }
+}

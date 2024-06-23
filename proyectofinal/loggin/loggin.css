@@ -1,0 +1,55 @@
+
+  
+  dialog{
+    height: 100%;
+    position: fixed;
+    background: bisque;
+    width: 100%;
+    opacity: 0.8;
+  
+  }
+  
+  .formulario {
+    top: 40%;
+    width: 50%;
+    height: 50%;
+    right: 60%;
+    
+  }
+  
+  .labels {
+    display: block;
+    margin-bottom: 5px;
+
+  }
+  
+  .inputs {
+    margin-bottom: 10px; 
+    display: block;
+    width: 70%;
+    height: 70%;
+    padding: 10px;
+    text-transform: capitalize;
+  }
+  
+  .botoon {
+    background: crimson;
+    height: 100%;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 1rem;
+    width: 70%;
+    
+  }
+
+ 
+
+  .card {
+    opacity: 0.8 !important;
+}
+
+button:disabled{
+  background-color: blue;
+}
+

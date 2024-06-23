@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuelos baratos</title>
+    <link rel="stylesheet" href="./ia2.css">
+    <script src="./ia.js"></script>
+</head>
+<body>
+  
+    <script src="./ia.js"></script>
+
+    <header class="header">
+        <div class="header-content">
+            <h1>Vuelos baratos de Puerto Vallarta a Querétaro</h1>
+            <p>desde <span class="highlight">253MXN*</span></p>
+            
+            <form class="search-form">
+                <div class="radio-buttons">
+                    <label><input type="radio" name="trip" checked> Viaje redondo</label>
+                    <label><input type="radio" name="trip"> Viaje sencillo</label>
+                </div>
+                <div class="container">
+       
+            
+            
+                <div class="form-group">
+                    <label for="from">Desde</label>
+                    
+                    <div class="input-group">
+                        <input type="text" id="from" value="Puerto Vallarta / Riviera Nayarit">
+                        <button class="clear-btn" onclick="clearInput('from')">X</button>
+                    </div>
+                </div>
+                <button class="swap-btn" onclick="swapText()">⇄</button>
+                <div class="form-group">
+                    <label for="to">A</label>
+                    <div class="input-group">
+                        <input type="text" id="to" value="Querétaro">
+                        <button class="clear-btn" onclick="clearInput('to')">X</button>
+                    </div>
+                </div>
+            </div>
+                <div class="form-group">
+                    <label>Salida</label>
+                    <input type="date">
+                </div>
+                <div class="form-group">
+                    <label>Regreso</label>
+                    <input type="date">
+                </div>
+                <div class="form-group">
+                    <select name="transporte" size="2" multiple>
+                        <option>Coche</option>
+                        <option>Avión</option>
+                        <option>Tren</option>
+                      </select>
+                      
+                </div>
+                <button type="submit" class="search-button">Buscar Vuelos</button>
+            </form>
+        </div>
+    </header>
+    <main>
+        <nav class="breadcrumb">
+            <a href="#">Inicio</a> &gt; 
+            <a href="#">Vuelos</a> &gt; 
+            <a href="#">A México</a> &gt; 
+            <a href="#">Puerto Vallarta a Querétaro</a>
+        </nav>
+        <section class="flights">
+            <h2>Vuelos de Puerto Vallarta a Querétaro</h2>
+            <div class="flight-search">
+                <div class="form-group">
+                    <label>Desde</label>
+                    <input type="text" placeholder="Puerto Vallarta / Riviera Nayarit">
+                </div>
+                <div class="form-group">
+                    <label>A</label>
+                    <input type="text" placeholder="Querétaro">
+                </div>
+            </div>
+            <div class="flight-cards">
+                <div class="flight-card">
+                    <h3>may. 2024</h3>
+                    <p>Desde 1,237MXN*</p>
+                    <p>Visto hace: 5 horas.</p>
+                    <p>Tipo de Vuelo Solo Ida | Clase Económica</p>
+                </div>
+                <div class="flight-card">
+                    <h3>jun. 2024</h3>
+                    <p>Desde 253MXN*</p>
+                    <p>Visto hace: 37 min.</p>
+                    <p>Tipo de Vuelo Solo Ida | Clase Económica</p>
+                </div>
+                <div class="flight-card">
+                    <h3>jul. 2024</h3>
+                    <p>Desde 384MXN*</p>
+                    <p>Visto hace: 33 min.</p>
+                    <p>Tipo de Vuelo Solo Ida | Clase Económica</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
