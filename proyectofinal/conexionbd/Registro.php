@@ -17,6 +17,8 @@ try {
     //PERFILES ES LA TABLA Y SELECCIONA LA PRIMERA COLUMNA QUE SALE
 //GENERALMETE ES ID DESPUES CORREO Y SEGUIDO DE PASSWORS
 //EN ESTE CASO MI PRIMER COLUMNA ES EL CORREO
+//AQJU LO QUE HACEMOS ES PREPARAR LA BASE
+//PARA DESPUES BUSCAR EN MI CASO EL ORDEN ES //CORREO Y DESPUES CONTRASEÑA
     $stmt = $pdo->prepare("SELECT * FROM perfiles WHERE correo = ?");
     $stmt->execute([$correo]);
     $usuario_existente = $stmt->fetch();
@@ -28,8 +30,11 @@ try {
         
        
     } else {
-//AQJU LO QUE HACEMOS ES PREPARAR LA BASE
-//PARA DESPUES BUSCAR EN MI CASO EL ORDEN ES //CORREO Y DESPUES CONTRASEÑA
+
+
+
+//AQUI INSERTAMOS LOS VALORES EN EL ORDEN QUE TENEMOS NUESTRAS COLUMNAS 
+
         $stmt = $pdo->prepare("INSERT INTO perfiles (correo, contrasena) VALUES (?, ?)");
         $stmt->execute([$correo, $contraseña]);
         echo "Registro exitoso. Puedes iniciar sesión <a href='../index.php'>aquí</a>.";
@@ -43,7 +48,7 @@ try {
 //MI BASE SE LLAMA NIGGER
 //MI TABLA SE LLAMA PERFILES Y ES DE DONDE VOY A MANDAR MIS REGISTROS
 /MI PRIMERA COLUMNA ES CORREO/USUARIO
-Y SERÍA MI PRIMER COLUMNA CORREO Y SEGUIDO DE CONTRASEÑA
+Y SERÍA MI PRIMER COLUMNA ID LUEGO CORREO Y SEGUIDO DE CONTRASEÑA
 
 
 ?>
