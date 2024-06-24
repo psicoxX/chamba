@@ -14,7 +14,8 @@ try {
 
     $correo = $_POST['usuario'];
     $contraseña = $_POST['contrasena'];
-
+    //PERFILES ES LA TABLA Y SELECCIONA LA PRIMERA COLUMNA QUE SALE
+//GENERALMETE ES ID DESPUES CORREO Y SEGUIDO DE PASSWORS
     $stmt = $pdo->prepare("SELECT * FROM perfiles WHERE correo = ?");
     $stmt->execute([$correo]);
     $usuario_existente = $stmt->fetch();
